@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-const createConfig = require('./createConfig');
+const createConfig = require('./createConfig')
 
 module.exports = [
   createConfig({
@@ -17,4 +17,4 @@ module.exports = [
     optimize: true,
     codeSplitting: false
   })
-];
+]

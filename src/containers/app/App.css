@@ -8,7 +8,7 @@
 }
 
 .logo {
-    background-image: url('components/app/Logo.svg');
+    background-image: url('containers/app/Logo.svg');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 100%;

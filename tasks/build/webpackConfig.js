@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-const createConfig = require('./createConfig');
+const createConfig = require('./createConfig')
 
 module.exports = [
   createConfig({
@@ -8,6 +8,7 @@ module.exports = [
     sourceMap: 'eval',
     hot: true,
     bootstrapChunk: true,
+
     // TODO: Remove the need for `publicPath` once the style / css loader
     // has landed a better fix for relative image references from
     // sourcemapped css.
@@ -21,4 +22,4 @@ module.exports = [
     sourceMap: 'eval',
     codeSplitting: false
   })
-];
+]

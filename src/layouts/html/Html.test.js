@@ -1,22 +1,22 @@
 /* eslint-env jest */
 
-import React from 'react';
-import renderer from 'react-test-renderer';
-import Html from 'components/html/Html';
+import React from 'react'
+import renderer from 'react-test-renderer'
+import Html from 'layouts/html/Html'
 
-describe('components/html/Html', () => {
+describe('layouts/html/Html', () => {
   it('renders correctly', () => {
-    process.env.API_ENDPOINT = 'http://localhost:6060/api';
-    process.env.REDUX_LOGGER = 'true';
+    process.env.API_ENDPOINT = 'http://localhost:6060/api'
+    process.env.REDUX_LOGGER = 'true'
     const component = renderer.create(
       <Html
         css={['bundle.css', 'chunk.css']}
         js={['bundle.js', 'chunk.js']}
         html={`
-                    <div id="root">
-                        Hello World.
-                    </div>
-                `}
+          <div id="root">
+            Hello World.
+          </div>
+        `}
         head={{
           title: {
             toComponent: () => '<title>title</title>'
@@ -32,8 +32,10 @@ describe('components/html/Html', () => {
           initial: 'state'
         }}
       />
-    );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-});
+    )
+
+    const tree = component.toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+})

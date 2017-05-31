@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/app/App renders correctly 1`] = `
+exports[`containers/app/App renders correctly 1`] = `
 <div
   className="root"
 >

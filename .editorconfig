@@ -1,20 +1,30 @@
-# EditorConfig: http://EditorConfig.org
+# http://editorconfig.org
 
+# A special property that should be specified at the top of the file outside of
+# any sections. Set to true to stop .editor config file search on current file
 root = true
 
 [*]
-charset = utf-8
-end_of_line = lf
-indent_size = 4
+# Indentation style
+# Possible values - tab, space
 indent_style = space
-insert_final_newline = true
+
+# Indentation size in single-spaced characters
+# Possible values - an integer, tab
+indent_size = 2
+
+# Line ending file format
+# Possible values - lf, crlf, cr
+end_of_line = lf
+
+# File character encoding
+# Possible values - latin1, utf-8, utf-16be, utf-16le
+charset = utf-8
+
+# Denotes whether to trim whitespace at the end of lines
+# Possible values - true, false
 trim_trailing_whitespace = true
 
-[*.md]
-trim_trailing_whitespace = false
-
-[{package.json}]
-# The indent size used in the `package.json` file cannot be changed
-# https://github.com/npm/npm/pull/3180#issuecomment-16336516
-indent_size = 2
-indent_style = space
+# Denotes whether file should end with a newline
+# Possible values - true, false
+insert_final_newline = true

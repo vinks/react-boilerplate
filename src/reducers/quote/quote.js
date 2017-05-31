@@ -2,7 +2,7 @@ import {
   FETCH_QUOTE_REQUEST,
   FETCH_QUOTE_SUCCESS,
   FETCH_QUOTE_FAILURE
-} from 'actions/quote/quote';
+} from 'actions/quote/quote'
 
 function quote(
   state = {
@@ -19,22 +19,25 @@ function quote(
         ...state,
         isFetching: true,
         error: false
-      };
+      }
+
     case FETCH_QUOTE_SUCCESS:
       return {
         ...state,
         isFetching: false,
         value: action.payload
-      };
+      }
+
     case FETCH_QUOTE_FAILURE:
       return {
         ...state,
         isFetching: false,
         error: action.payload
-      };
+      }
+
     default:
-      return state;
+      return state
   }
 }
 
-export default quote;
+export default quote

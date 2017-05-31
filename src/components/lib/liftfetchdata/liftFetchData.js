@@ -4,12 +4,15 @@
  * weakId component and it's deps.
  */
 export default webpackRequireWeakId => Component => {
-  const weakId = webpackRequireWeakId();
+  const weakId = webpackRequireWeakId()
+
   if (__webpack_modules__[weakId]) {
-    const module = __webpack_require__(weakId).default;
+    const module = __webpack_require__(weakId).default
+
     if (module && typeof module.fetchData === 'function') {
-      Component.fetchData = (...args) => module.fetchData(...args);
+      Component.fetchData = (...args) => module.fetchData(...args)
     }
   }
-  return Component;
-};
+
+  return Component
+}

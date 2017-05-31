@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import serialize from 'serialize-javascript';
+import React from 'react'
+import PropTypes from 'prop-types'
+import serialize from 'serialize-javascript'
 
 function Html({ js, css, html, head, initialState }) {
   return (
@@ -69,7 +69,7 @@ function Html({ js, css, html, head, initialState }) {
         {js.map(js => <script key={js} src={`/${js}`} />)}
       </body>
     </html>
-  );
+  )
 }
 
 Html.propTypes = {
@@ -78,6 +78,6 @@ Html.propTypes = {
   html: PropTypes.string,
   head: PropTypes.object.isRequired,
   initialState: PropTypes.object.isRequired
-};
+}
 
-export default Html;
+export default Html

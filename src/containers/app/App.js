@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import { Link } from 'react-router';
-import styles from 'components/app/App.css';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import { Link } from 'react-router'
+import styles from 'containers/app/App.css'
 
-const DEFAULT_TITLE = '60fram.es React Boilerplate';
+const DEFAULT_TITLE = '60fram.es React Boilerplate'
 
 function App({ children }) {
   return (
@@ -20,11 +20,11 @@ function App({ children }) {
       </div>
       {children}
     </div>
-  );
+  )
 }
 
 App.propTypes = {
   children: PropTypes.node
-};
+}
 
-export default App;
+export default App

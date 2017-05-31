@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = ({ revision, extractCss }) => [
   new ExtractTextPlugin({
@@ -8,4 +8,4 @@ module.exports = ({ revision, extractCss }) => [
     allChunks: true,
     disable: !extractCss
   })
-];
+]

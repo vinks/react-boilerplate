@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/html/Html renders correctly 1`] = `
+exports[`layouts/html/Html renders correctly 1`] = `
 <html
   lang="en"
 >

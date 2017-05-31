@@ -1,4 +1,4 @@
-const rootDirname = require('../root').rootDirname;
+const rootDirname = require('../root').rootDirname
 
 /**
  * Strips out path specific output from webpack config snapshots.
@@ -13,14 +13,15 @@ const rootDirname = require('../root').rootDirname;
  */
 
 const print = (val, serialize) => {
-  const snapshot = serialize(val.__webpack_config__);
-  const rootDirnameRegex = new RegExp(rootDirname, 'g');
-  return snapshot.replace(rootDirnameRegex, '<rootDir>');
-};
+  const snapshot = serialize(val.__webpack_config__)
+  const rootDirnameRegex = new RegExp(rootDirname, 'g')
 
-const test = val => !!val.__webpack_config__;
+  return snapshot.replace(rootDirnameRegex, '<rootDir>')
+}
+
+const test = val => !!val.__webpack_config__
 
 module.exports = {
   print,
   test
-};
+}
