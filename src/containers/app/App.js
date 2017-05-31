@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { Link } from 'react-router'
+
+// Styles
 import styles from 'containers/app/App.css'
 
 const DEFAULT_TITLE = '60fram.es React Boilerplate'

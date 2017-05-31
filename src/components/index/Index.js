@@ -5,9 +5,12 @@ import { fetchQuoteIfNeeded } from 'actions/quote/quote'
 
 import Loader from 'components/lib/loader/Loader'
 import Error from 'components/lib/error/Error'
+
+// Styles
 import styles from 'components/index/Index.css'
 
 export class Index extends Component {
+
   componentDidMount() {
     const { dispatch } = this.props
 
@@ -19,9 +22,9 @@ export class Index extends Component {
 
     return (
       <div className={styles.root}>
-        {isFetching ? <Loader /> : null}
-        {error ? <Error>{error}</Error> : null}
-        {value ? <p>{value}</p> : null}
+        {isFetching && <Loader />}
+        {error && <Error>{error}</Error>}
+        {value && <p>{value}</p>}
       </div>
     )
   }
