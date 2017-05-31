@@ -6,14 +6,57 @@
     "node": "7.2.0"
   },
   "scripts": {
-    "start": "npm run serve",
-    "serve": "node -r ./server/environment ./server",
-    "build": "node ./tasks/build",
+    "start": "better-npm-run start",
+    "start:production": "yarn build && yarn start:prod",
+    "start:prod": "better-npm-run start:prod",
+    "serve": "node ./server",
+    "build": "better-npm-run build",
     "test": "jest --coverage",
     "lint": "eslint .",
     "format": "eslint . --fix",
     "precommit": "lint-staged",
     "heroku-postbuild": "npm run build"
+  },
+  "betterScripts": {
+    "start": {
+      "command": "npm run serve",
+      "env": {
+        "NODE_ENV": "development",
+        "PORT": 6060,
+        "DEBUG": "app",
+        "BROWSER_CACHE": 0,
+        "WEBPACK_DEV_SERVER": true,
+        "BROWSER": false,
+        "API_ENDPOINT": "http://localhost:6060/api",
+        "REDUX_LOGGER": true
+      }
+    },
+    "start:prod": {
+      "command": "npm run serve",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": 6060,
+        "DEBUG": "app",
+        "BROWSER_CACHE": 0,
+        "WEBPACK_DEV_SERVER": false,
+        "BROWSER": false,
+        "API_ENDPOINT": "http://localhost:6060/api",
+        "REDUX_LOGGER": false
+      }
+    },
+    "build": {
+      "command": "node ./tasks/build",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": 6060,
+        "DEBUG": "app",
+        "BROWSER_CACHE": 0,
+        "WEBPACK_DEV_SERVER": false,
+        "BROWSER": false,
+        "API_ENDPOINT": "http://localhost:6060/api",
+        "REDUX_LOGGER": false
+      }
+    }
   },
   "author": "",
   "license": "MIT",
@@ -28,6 +71,7 @@
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-2": "^6.22.0",
+    "better-npm-run": "0.0.15",
     "coveralls": "^2.12.0",
     "css-loader": "^0.28.0",
     "dotenv": "^4.0.0",
