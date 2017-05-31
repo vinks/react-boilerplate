@@ -5,9 +5,9 @@ import {
   FETCH_QUOTE_REQUEST,
   FETCH_QUOTE_SUCCESS,
   FETCH_QUOTE_FAILURE
-} from 'actions/quote/quote'
+} from 'pages/index/actions/quote/quote'
 
-describe('reducers/quote/quote', () => {
+describe('pages/index/reducers/quote/quote', () => {
   it('returns the initial state', () => {
     expect(reducer(void 0, {})).toEqual({
       isFetching: false,

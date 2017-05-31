@@ -3,7 +3,7 @@
 module.exports = include => ({
   enforce: 'pre',
   include,
-  test: /\.js$/,
+  loader: 'eslint-loader',
   exclude: /node_modules/,
-  loader: 'eslint-loader'
+  test: /\.js$/
 })

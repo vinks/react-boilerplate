@@ -9,7 +9,6 @@ function Html({ js, css, html, head, initialState }) {
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge,chrome=1" />
         {head.title.toComponent()}
-        {head.base.toComponent()}
         {head.meta.toComponent()}
         <meta
           name="viewport"
@@ -68,8 +67,6 @@ function Html({ js, css, html, head, initialState }) {
           }}
         />
         {js.map(js => <script key={js} src={`/${js}`} />)}
-
-        {head.script.toComponent()}
       </body>
     </html>
   )

@@ -2,9 +2,9 @@
 
 import React from 'react'
 import renderer from 'react-test-renderer'
-import NotFound from 'components/notfound/NotFound'
+import NotFound from 'pages/notfound/NotFound'
 
-describe('components/notfound/NotFound', () => {
+describe('pages/notfound/NotFound', () => {
   it('renders correctly', () => {
     const component = renderer.create(<NotFound />)
 

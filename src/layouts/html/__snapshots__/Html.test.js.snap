@@ -79,10 +79,10 @@ exports[`layouts/html/Html renders correctly 1`] = `
       dangerouslySetInnerHTML={
         Object {
           "__html": "
-                            <div id=\\"root\\">
-                                Hello World.
-                            </div>
-                        ",
+                  <div id=\\"root\\">
+                    Hello World.
+                  </div>
+                ",
         }
       }
       id="root"

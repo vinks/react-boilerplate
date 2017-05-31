@@ -2,9 +2,9 @@
 
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { Index } from 'components/index/Index'
+import { Index } from 'pages/index/Index'
 
-describe('components/index/Index', () => {
+describe('pages/index/Index', () => {
   it('renders a quote', () => {
     const component = renderer.create(
       <Index

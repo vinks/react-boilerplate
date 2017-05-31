@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/index/Index renders a loading indicator 1`] = `
+exports[`pages/index/Index renders a loading indicator 1`] = `
 <div
   className="root"
 >
@@ -12,7 +12,7 @@ exports[`components/index/Index renders a loading indicator 1`] = `
 </div>
 `;
 
-exports[`components/index/Index renders a quote 1`] = `
+exports[`pages/index/Index renders a quote 1`] = `
 <div
   className="root"
 >
@@ -22,7 +22,7 @@ exports[`components/index/Index renders a quote 1`] = `
 </div>
 `;
 
-exports[`components/index/Index renders an error 1`] = `
+exports[`pages/index/Index renders an error 1`] = `
 <div
   className="root"
 >

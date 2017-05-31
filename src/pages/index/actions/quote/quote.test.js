@@ -11,11 +11,11 @@ import {
   FETCH_QUOTE_SUCCESS,
   FETCH_QUOTE_FAILURE,
   fetchQuoteIfNeeded
-} from 'actions/quote/quote'
+} from 'pages/index/actions/quote/quote'
 
 const mockStore = configureMockStore([thunk])
 
-describe('actions/quote/quote', () => {
+describe('pages/index/actions/quote/quote', () => {
   beforeEach(() => {
     fetch.mockClear()
     fetch.mockReturnValue(Promise.resolve({}))

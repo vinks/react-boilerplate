@@ -2,10 +2,10 @@ import React from 'react'
 import { Route, IndexRoute, Redirect } from 'react-router'
 
 import App from 'containers/app/App'
-import NotFound from 'components/notfound/NotFound'
+import NotFound from 'pages/notfound/NotFound'
 
 // Pages
-import IndexLoadable from 'components/index/IndexLoadable'
+import IndexLoadable from 'pages/index/IndexLoadable'
 
 export default (
   <Route path="/" component={App}>

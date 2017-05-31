@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { fetchQuoteIfNeeded } from 'actions/quote/quote'
+import { fetchQuoteIfNeeded } from 'pages/index/actions/quote/quote'
 
 import Loader from 'components/lib/loader/Loader'
 import Error from 'components/lib/error/Error'
 
 // Styles
-import styles from 'components/index/Index.css'
+import styles from 'pages/index/Index.css'
 
 export class Index extends Component {
 

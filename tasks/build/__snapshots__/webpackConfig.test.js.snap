@@ -3,7 +3,7 @@
 exports[`tasks/build/webpackConfig client config has not regressed 1`] = `
 Object {
   "bail": true,
-  "context": "<rootDir>/src",
+  "context": "D:\\\\work\\\\ssr\\\\60fram\\\\src",
   "devtool": "eval",
   "entry": Object {
     "client": Array [
@@ -16,7 +16,14 @@ Object {
   "module": Object {
     "rules": Array [
       Object {
-        "include": "<rootDir>/src",
+        "enforce": "pre",
+        "exclude": /node_modules/,
+        "include": "D:\\\\work\\\\ssr\\\\60fram\\\\src",
+        "loader": "eslint-loader",
+        "test": /\\\\\\.js\\$/,
+      },
+      Object {
+        "include": "D:\\\\work\\\\ssr\\\\60fram\\\\src",
         "loader": "babel-loader",
         "options": Object {
           "cacheDirectory": true,
@@ -28,7 +35,7 @@ Object {
         "test": /\\\\\\.css\\$/,
         "use": Array [
           Object {
-            "loader": "<rootDir>/node_modules/extract-text-webpack-plugin/loader.js",
+            "loader": "D:\\\\work\\\\ssr\\\\60fram\\\\node_modules\\\\extract-text-webpack-plugin\\\\loader.js",
             "options": Object {
               "omit": 1,
               "remove": true,
@@ -56,11 +63,11 @@ Object {
         ],
       },
       Object {
-        "include": "<rootDir>/src",
+        "include": "D:\\\\work\\\\ssr\\\\60fram\\\\src",
         "test": /\\\\\\.css\\$/,
         "use": Array [
           Object {
-            "loader": "<rootDir>/node_modules/extract-text-webpack-plugin/loader.js",
+            "loader": "D:\\\\work\\\\ssr\\\\60fram\\\\node_modules\\\\extract-text-webpack-plugin\\\\loader.js",
             "options": Object {
               "omit": 1,
               "remove": true,
@@ -88,7 +95,7 @@ Object {
         ],
       },
       Object {
-        "include": "<rootDir>/src",
+        "include": "D:\\\\work\\\\ssr\\\\60fram\\\\src",
         "loader": "url-loader",
         "options": Object {
           "limit": 10000,
@@ -96,7 +103,7 @@ Object {
         "test": /\\\\\\.\\(eot\\|ttf\\|woff\\|woff2\\)\\(\\\\\\?\\.\\*\\)\\?\\$/,
       },
       Object {
-        "include": "<rootDir>/src",
+        "include": "D:\\\\work\\\\ssr\\\\60fram\\\\src",
         "loader": "url-loader",
         "options": Object {
           "limit": 10000,
@@ -104,7 +111,7 @@ Object {
         "test": /\\\\\\.\\(gif\\|ico\\|jpg\\|jpeg\\|png\\|svg\\|webp\\)\\$/,
       },
       Object {
-        "include": "<rootDir>/src",
+        "include": "D:\\\\work\\\\ssr\\\\60fram\\\\src",
         "loader": "url-loader",
         "options": Object {
           "limit": 10000,
@@ -112,7 +119,7 @@ Object {
         "test": /\\\\\\.\\(mp4\\|webm\\)\\$/,
       },
       Object {
-        "include": "<rootDir>/src",
+        "include": "D:\\\\work\\\\ssr\\\\60fram\\\\src",
         "loader": "url-loader",
         "options": Object {
           "limit": 10000,
@@ -128,7 +135,7 @@ Object {
   "output": Object {
     "filename": "[name].js",
     "libraryTarget": "var",
-    "path": "<rootDir>/dist",
+    "path": "D:\\\\work\\\\ssr\\\\60fram\\\\dist",
     "publicPath": "http://localhost:6060/",
   },
   "plugins": Array [
@@ -155,7 +162,7 @@ Object {
         "bootstrap",
       ],
       "filenameTemplate": "[name].js",
-      "ident": "<rootDir>/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js0",
+      "ident": "D:\\\\work\\\\ssr\\\\60fram\\\\node_modules\\\\webpack\\\\lib\\\\optimize\\\\CommonsChunkPlugin.js0",
       "minChunks": Infinity,
       "minSize": undefined,
       "selectedChunks": undefined,
@@ -163,7 +170,7 @@ Object {
   ],
   "resolve": Object {
     "modules": Array [
-      "<rootDir>/src",
+      "D:\\\\work\\\\ssr\\\\60fram\\\\src",
       "node_modules",
     ],
   },
@@ -174,7 +181,7 @@ Object {
 exports[`tasks/build/webpackConfig server config has not regressed 1`] = `
 Object {
   "bail": true,
-  "context": "<rootDir>/src",
+  "context": "D:\\\\work\\\\ssr\\\\60fram\\\\src",
   "devtool": "eval",
   "entry": Object {
     "server": "./server",
@@ -182,7 +189,14 @@ Object {
   "module": Object {
     "rules": Array [
       Object {
-        "include": "<rootDir>/src",
+        "enforce": "pre",
+        "exclude": /node_modules/,
+        "include": "D:\\\\work\\\\ssr\\\\60fram\\\\src",
+        "loader": "eslint-loader",
+        "test": /\\\\\\.js\\$/,
+      },
+      Object {
+        "include": "D:\\\\work\\\\ssr\\\\60fram\\\\src",
         "loader": "babel-loader",
         "options": Object {
           "cacheDirectory": true,
@@ -205,7 +219,7 @@ Object {
         ],
       },
       Object {
-        "include": "<rootDir>/src",
+        "include": "D:\\\\work\\\\ssr\\\\60fram\\\\src",
         "test": /\\\\\\.css\\$/,
         "use": Array [
           Object {
@@ -220,7 +234,7 @@ Object {
         ],
       },
       Object {
-        "include": "<rootDir>/src",
+        "include": "D:\\\\work\\\\ssr\\\\60fram\\\\src",
         "loader": "url-loader",
         "options": Object {
           "limit": 10000,
@@ -228,7 +242,7 @@ Object {
         "test": /\\\\\\.\\(eot\\|ttf\\|woff\\|woff2\\)\\(\\\\\\?\\.\\*\\)\\?\\$/,
       },
       Object {
-        "include": "<rootDir>/src",
+        "include": "D:\\\\work\\\\ssr\\\\60fram\\\\src",
         "loader": "url-loader",
         "options": Object {
           "limit": 10000,
@@ -236,7 +250,7 @@ Object {
         "test": /\\\\\\.\\(gif\\|ico\\|jpg\\|jpeg\\|png\\|svg\\|webp\\)\\$/,
       },
       Object {
-        "include": "<rootDir>/src",
+        "include": "D:\\\\work\\\\ssr\\\\60fram\\\\src",
         "loader": "url-loader",
         "options": Object {
           "limit": 10000,
@@ -244,7 +258,7 @@ Object {
         "test": /\\\\\\.\\(mp4\\|webm\\)\\$/,
       },
       Object {
-        "include": "<rootDir>/src",
+        "include": "D:\\\\work\\\\ssr\\\\60fram\\\\src",
         "loader": "url-loader",
         "options": Object {
           "limit": 10000,
@@ -260,7 +274,7 @@ Object {
   "output": Object {
     "filename": "[name].js",
     "libraryTarget": "commonjs2",
-    "path": "<rootDir>/dist",
+    "path": "D:\\\\work\\\\ssr\\\\60fram\\\\dist",
     "publicPath": "",
   },
   "plugins": Array [
@@ -283,7 +297,7 @@ Object {
   ],
   "resolve": Object {
     "modules": Array [
-      "<rootDir>/src",
+      "D:\\\\work\\\\ssr\\\\60fram\\\\src",
       "node_modules",
     ],
   },

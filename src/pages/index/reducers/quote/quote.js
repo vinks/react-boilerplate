@@ -2,7 +2,7 @@ import {
   FETCH_QUOTE_REQUEST,
   FETCH_QUOTE_SUCCESS,
   FETCH_QUOTE_FAILURE
-} from 'actions/quote/quote'
+} from 'pages/index/actions/quote/quote'
 
 function quote(
   state = {
