@@ -1,0 +1,17 @@
+{
+  "apps": [
+    {
+      "name": "server",
+      "script": "server/index.js",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": 6060,
+        "DEBUG": "app",
+        "BROWSER_CACHE": 0,
+        "WEBPACK_DEV_SERVER": false,
+        "BROWSER": false,
+        "API_ENDPOINT": "http://localhost:6060/api",
+        "REDUX_LOGGER": false
+      }
+    }]
+}
