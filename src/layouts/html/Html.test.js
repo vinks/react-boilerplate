@@ -8,6 +8,7 @@ describe('layouts/html/Html', () => {
   it('renders correctly', () => {
     process.env.API_ENDPOINT = 'http://localhost:6060/api'
     process.env.REDUX_LOGGER = 'true'
+
     const component = renderer.create(
       <Html
         css={['bundle.css', 'chunk.css']}

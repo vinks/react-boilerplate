@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import Helmet from 'react-helmet'
 import { flushWebpackRequireWeakIds } from 'react-loadable'
 import configureStore from 'store/configureStore'
-import routes, { NotFoundComponent } from 'routes'
+import getRoutes, { NotFoundComponent } from 'routes'
 import Html from 'layouts/html/Html'
 
 function flatten(arr) {
@@ -161,6 +161,7 @@ export default ({ clientStats }) => {
     const memoryHistory = createMemoryHistory(url)
     const store = configureStore()
     const history = syncHistoryWithStore(memoryHistory, store)
+    const routes = getRoutes(store)
 
     match({ history, routes, location: url },
       (error, redirectLocation, renderProps) => {

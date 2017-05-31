@@ -1,8 +1,5 @@
 'use strict'
 
-const express = require('express')
-const router = express.Router()
-
 const QUOTES = [
   'If you want to keep a secret, you must also hide it from yourself.',
   'He who controls the past controls the future. He who controls the present controls the past.',
@@ -19,10 +16,12 @@ const QUOTES = [
   'Power is not a means; it is an end. One does not establish a dictatorship in order to safeguard a revolution; one makes the revolution in order to establish the dictatorship. The object of persecution is persecution. The object of torture is torture. The object of power is power'
 ]
 
-router.get('/quote', (req, res) => {
+const getQuote = (req, res) => {
   res.json({
     quote: QUOTES[Math.floor(Math.random() * QUOTES.length)]
   })
-})
+}
 
-module.exports = router
+module.exports = {
+  getQuote
+}

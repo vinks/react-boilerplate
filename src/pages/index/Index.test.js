@@ -22,7 +22,11 @@ describe('pages/index/Index', () => {
 
   it('renders a loading indicator', () => {
     const component = renderer.create(
-      <Index isFetching dispatch={jest.fn()} error={false} />
+      <Index
+        isFetching
+        dispatch={jest.fn()}
+        error={false}
+      />
     )
 
     const tree = component.toJSON()
@@ -32,7 +36,11 @@ describe('pages/index/Index', () => {
 
   it('renders an error', () => {
     const component = renderer.create(
-      <Index error="An error" dispatch={jest.fn()} isFetching={false} />
+      <Index
+        error="An error"
+        dispatch={jest.fn()}
+        isFetching={false}
+      />
     )
 
     const tree = component.toJSON()
