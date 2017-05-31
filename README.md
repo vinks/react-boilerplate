@@ -5,12 +5,11 @@ Production-ready boilerplate for building *universal* web apps with [React](http
 ## tl;dr
 
 ```
-$ git clone https://github.com/60frames/react-boilerplate.git
+$ git clone https://github.com/vinks/react-boilerplate.git
 $ cd react-boilerplate
 $ rm -r .git
-$ cp ./server/_env ./server/.env
-$ npm install
-$ npm start
+$ yarn
+$ yarn start
 ```
 
 ## Features
@@ -25,33 +24,18 @@ $ npm start
 - ...Just 4 commands
 
 ## Commands
+## NPM Script Commands
+ All of the scripts are listed as following:
 
-### `npm start`
-
-Serves the app in development mode
-
-> NOTE: This is simply an alias for `npm run serve`.
-
-### `npm test`
-
-Runs unit tests
-
-### `npm run build`
-
-Builds the app ready for release
-
-### `WEBPACK_DEV_SERVER=false npm run serve`
-
-Serves the app in release mode
-
-> NOTE: Requires you to first build the app with `npm run build`.
+`yarn <script>`|Description
+------------------|-----------
+`start`|Run your app on the development server at `localhost:6060`. HMR will be enabled.
+`start:production`|Builds the app ready for release and run it on the production server at `localhost:6060`.
+`start:prod`|Run your app on the production server only at `localhost:6060`.
+`test`|Runs unit tests.
+`build`|Builds the app ready for release.
 
 ## Environment Variables
-
-Environment variables are defined via Unix env vars and are documented in the [`./server/_env`](server/_env) file.
-
-To avoid the hassle of having to define env vars on your local machine during development we recommend you simply rename the [`./server/_env`](server/_env) file to `./server/.env` which, in the absence of a predefined `NODE_ENV`, will be copied to your environment.
-
 > NOTE: Any of the environment variables can be made available to the client by explicitly declaring them in the root [Html](src/components/html/Html.js) component. This extra step is required to prevent accidentally leaking sensitive data to the client.
 
 ## License
