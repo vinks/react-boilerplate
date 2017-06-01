@@ -14,7 +14,7 @@ module.exports = [
     // sourcemapped css.
     // https://github.com/webpack/style-loader#recommended-configuration
     // https://github.com/wprocess.env.NODE_ENVebpack/style-loader/issues/55
-    publicPath: `http://localhost:${process.env.PORT}/`
+    publicPath: `http://localhost:${process.env.PORT || 6060}/`
   }),
   createConfig({
     name: 'server',

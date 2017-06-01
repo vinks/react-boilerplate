@@ -12,6 +12,7 @@
     "serve": "node ./server",
     "build": "better-npm-run build",
     "test": "jest --coverage",
+    "test:update": "jest --updateSnapshot",
     "lint": "eslint .",
     "format": "eslint . --fix",
     "precommit": "lint-staged",
