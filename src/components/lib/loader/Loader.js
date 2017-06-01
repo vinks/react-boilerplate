@@ -3,7 +3,7 @@ import styles from './Loader.css'
 
 const Loader = () => (
   <div className={styles.root}>
-    Loading...
+    { 'Loading...' }
   </div>
 )
 

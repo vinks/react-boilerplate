@@ -6,7 +6,7 @@ import { Link } from 'react-router'
 // Styles
 import styles from 'containers/app/App.css'
 
-const DEFAULT_TITLE = '60fram.es React Boilerplate'
+const DEFAULT_TITLE = 'React Boilerplate'
 
 function App({ children }) {
   return (
@@ -17,10 +17,10 @@ function App({ children }) {
       />
       <div className={styles.logo}>
         <Link to="/" title="Home" className={styles.logoContent}>
-          60fram.es
+          { 'React Boilerplate' }
         </Link>
       </div>
-      {children}
+      { children }
     </div>
   )
 }

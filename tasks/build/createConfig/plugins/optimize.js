@@ -1,6 +1,7 @@
 'use strict'
 
 const webpack = require('webpack')
+const BabiliPlugin = require('babili-webpack-plugin')
 
 module.exports = ({ optimize, sourceMap }) =>
   optimize ? [
@@ -29,7 +30,9 @@ module.exports = ({ optimize, sourceMap }) =>
     }),
 
     // Deterministic module ids for long term caching
-    new webpack.HashedModuleIdsPlugin()
+    new webpack.HashedModuleIdsPlugin(),
+
+    new BabiliPlugin()
   ] : [
     // Deterministic, readable module ids
     new webpack.NamedModulesPlugin()

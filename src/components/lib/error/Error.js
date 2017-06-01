@@ -4,7 +4,7 @@ import styles from './Error.css'
 
 const Error = ({ children }) => (
   <div className={styles.root}>
-    {children}
+    { children }
   </div>
 )
 
