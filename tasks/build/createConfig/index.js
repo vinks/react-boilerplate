@@ -9,6 +9,7 @@ const fonts = require('./rules/fonts')
 const images = require('./rules/images')
 const video = require('./rules/video')
 const audio = require('./rules/audio')
+const po = require('./rules/po')
 const extractCss = require('./plugins/extractCss')
 const optimize = require('./plugins/optimize')
 const stats = require('./plugins/stats')
@@ -77,7 +78,8 @@ module.exports = options => {
         fonts(SRC_DIR),
         images(SRC_DIR),
         video(SRC_DIR),
-        audio(SRC_DIR)
+        audio(SRC_DIR),
+        po()
       ]
     },
     resolve: {

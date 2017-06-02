@@ -39,6 +39,16 @@
   cursor: pointer;
 }
 
+.h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.link {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 @keyframes breathe {
   0% {
     transform: translate(0%, 0%);
