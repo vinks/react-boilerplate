@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Fri Jun 02 2017 14:06:02 GMT+0300 (RTZ 2 (зима))\n"
+"POT-Creation-Date: Fri Jun 02 2017 14:41:54 GMT+0300 (RTZ 2 (зима))\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"

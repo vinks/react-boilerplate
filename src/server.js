@@ -182,6 +182,8 @@ export default ({ clientStats }) => {
 
       res.status(200)
         .send(`<!doctype html>${html}`)
+
+      return
     }
 
     match({ history, routes, location: url },
