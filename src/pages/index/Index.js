@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { T } from 'lioness'
 import { fetchQuoteIfNeeded } from 'pages/index/actions/quote/quote'
 
 import Loader from 'components/lib/loader/Loader'
@@ -22,6 +23,15 @@ export class Index extends Component {
 
     return (
       <div className={styles.root}>
+        <h1 className={styles.h1}>
+          <T
+            message="Dear {{ name }}, there is one potato left"
+            messagePlural="Dear {{ name }}, there are {{ count }} potatoes left"
+            count={1}
+            name={'User'}
+          />
+        </h1>
+
         {isFetching && <Loader />}
         {error && <Error>{error}</Error>}
         {value && <p>{value}</p>}

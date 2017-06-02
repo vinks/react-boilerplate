@@ -126,6 +126,10 @@ Object {
         },
         "test": /\\\\\\.\\(aac\\|m4a\\|mp3\\|oga\\|ogg\\|wav\\)\\$/,
       },
+      Object {
+        "loader": "json-loader!po-gettext-loader",
+        "test": /\\\\\\.po\\$/,
+      },
     ],
   },
   "name": "client",
@@ -264,6 +268,10 @@ Object {
           "limit": 10000,
         },
         "test": /\\\\\\.\\(aac\\|m4a\\|mp3\\|oga\\|ogg\\|wav\\)\\$/,
+      },
+      Object {
+        "loader": "json-loader!po-gettext-loader",
+        "test": /\\\\\\.po\\$/,
       },
     ],
   },
