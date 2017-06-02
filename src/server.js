@@ -106,7 +106,7 @@ function getCss(stats) {
   return [getCssByChunkName('client', stats)].filter(isTruthy)
 }
 
-function render(renderProps, store, stats) {
+function renderSsr(renderProps, store, stats) {
   const markup = renderToString(
     <Provider store={store}>
       <RouterContext {...renderProps} />
@@ -117,7 +117,6 @@ function render(renderProps, store, stats) {
   const moduleIds = flushWebpackRequireWeakIds()
   const js = getJs(moduleIds, stats)
   const css = getCss(stats)
-  const initialState = store.getState()
 
   return renderToStaticMarkup(
     <Html
@@ -125,7 +124,22 @@ function render(renderProps, store, stats) {
       css={css}
       html={markup}
       head={head}
-      initialState={initialState}
+      store={store}
+    />
+  )
+}
+
+function render(store, stats) {
+  const moduleIds = flushWebpackRequireWeakIds()
+  const js = getJs(moduleIds, stats)
+  const css = getCss(stats)
+  const head = Helmet.rewind()
+
+  return renderToStaticMarkup(
+    <Html
+      js={js}
+      css={css}
+      head={head}
     />
   )
 }
@@ -163,6 +177,13 @@ export default ({ clientStats }) => {
     const history = syncHistoryWithStore(memoryHistory, store)
     const routes = getRoutes(store)
 
+    if (process.env.DISABLE_SSR) {
+      const html = render(store, { modulesById, chunksById, assetsByChunkName })
+
+      res.status(200)
+        .send(`<!doctype html>${html}`)
+    }
+
     match({ history, routes, location: url },
       (error, redirectLocation, renderProps) => {
         if (error) {
@@ -176,7 +197,7 @@ export default ({ clientStats }) => {
             let html
 
             try {
-              html = render(renderProps, store, { modulesById, chunksById, assetsByChunkName })
+              html = renderSsr(renderProps, store, { modulesById, chunksById, assetsByChunkName })
             } catch (ex) {
               return next(ex)
             }

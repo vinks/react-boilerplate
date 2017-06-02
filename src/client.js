@@ -8,7 +8,8 @@ import { AppContainer } from 'react-hot-loader'
 import Root from 'containers/root/Root'
 import configureStore from 'store/configureStore'
 
-const store = configureStore(window.__INITIAL_STATE__)
+const initialState = window.__INITIAL_STATE__ || {}
+const store = configureStore(initialState)
 const history = syncHistoryWithStore(browserHistory, store)
 
 const MOUNT_NODE = document.getElementById('root')

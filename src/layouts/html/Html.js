@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import serialize from 'serialize-javascript'
 
-function Html({ js, css, html, head, initialState }) {
+function Html({ js, css, html, head, store }) {
   return (
     <html lang="en">
       <head>
@@ -50,6 +50,8 @@ function Html({ js, css, html, head, initialState }) {
             __html: html
           }}
         />
+
+        {/* App env */}
         <script
           dangerouslySetInnerHTML={{
             __html: `window.process = ${serialize({
@@ -61,12 +63,15 @@ function Html({ js, css, html, head, initialState }) {
             })}`
           }}
         />
+
+        {/* Store the initial state into window */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.__INITIAL_STATE__ = ${serialize(initialState)}`
+            __html: store && `window.__INITIAL_STATE__=${serialize(store.getState())};`
           }}
         />
-        {js.map(js => <script key={js} src={`/${js}`} />)}
+
+        { js.map(js => <script key={js} src={`/${js}`} />) }
       </body>
     </html>
   )
@@ -77,7 +82,7 @@ Html.propTypes = {
   css: PropTypes.array.isRequired,
   html: PropTypes.string,
   head: PropTypes.object.isRequired,
-  initialState: PropTypes.object.isRequired
+  store: PropTypes.object
 }
 
 export default Html

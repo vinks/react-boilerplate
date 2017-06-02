@@ -29,7 +29,8 @@
         "WEBPACK_DEV_SERVER": true,
         "BROWSER": false,
         "API_ENDPOINT": "http://localhost:6060/api",
-        "REDUX_LOGGER": true
+        "REDUX_LOGGER": true,
+        "DISABLE_SSR": true
       }
     },
     "start:prod": {
