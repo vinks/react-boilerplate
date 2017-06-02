@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-06-02 09:36+0300\n"
+"POT-Creation-Date: 2017-06-02 10:54+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -14,13 +14,12 @@ msgstr ""
 "X-Generator: Poedit 2.0.2\n"
 
 #: D:/work/ssr/60fram/src/containers/app/App.js:26
-#: D:/work/ssr/60fram/src/containers/app/App.js:34
 msgid "Dear {{ name }}, there is one potato left"
 msgid_plural "Dear {{ name }}, there are {{ count }} potatoes left"
 msgstr[0] "Дорогой {{ name }}, осталась одна картошка"
 msgstr[1] "Дорогой {{ name }}, осталось {{ count }} картошки"
 msgstr[2] "Дорогой {{ name }}, осталось {{ count }} картошек"
 
-#: D:/work/ssr/60fram/src/containers/app/App.js:34
+#: D:/work/ssr/60fram/src/containers/app/App.js:35
 msgid "By more potatoes {{ link:here }}!"
 msgstr "Купить больше картошки можно {{ link:тут }}!"

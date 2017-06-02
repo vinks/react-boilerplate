@@ -1,11 +1,12 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Fri Jun 02 2017 10:03:18 GMT+0300 (RTZ 2 (зима))\n"
+"POT-Creation-Date: Fri Jun 02 2017 10:55:14 GMT+0300 (RTZ 2 (зима))\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: D:/work/ssr/60fram/src/containers/app/App.js:26
+#: D:/work/ssr/60fram/src/pages/index/Index.js:27
 msgid "Dear {{ name }}, there is one potato left"
 msgid_plural "Dear {{ name }}, there are {{ count }} potatoes left"
 msgstr[0] ""
