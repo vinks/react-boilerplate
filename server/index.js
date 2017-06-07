@@ -9,11 +9,14 @@ const app = express()
 
 app.set('port', process.env.PORT)
 app.use(compression())
-app.use('/api', api)
 
 if (process.env.WEBPACK_DEV_SERVER === 'true') {
+  app.use('/api', (req, res, next) => {
+    require('./routes/api')(req, res, next)
+  })
   app.use(require('./routes/webpack'))
 } else {
+  app.use('/api', api)
   app.use(require('./routes/static'))
 }
 

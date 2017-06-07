@@ -30,7 +30,7 @@
         "BROWSER": false,
         "API_ENDPOINT": "http://localhost:6060/api",
         "REDUX_LOGGER": true,
-        "DISABLE_SSR": true
+        "DISABLE_SSR": false
       }
     },
     "start:prod": {
@@ -43,7 +43,8 @@
         "WEBPACK_DEV_SERVER": false,
         "BROWSER": false,
         "API_ENDPOINT": "http://localhost:6060/api",
-        "REDUX_LOGGER": false
+        "REDUX_LOGGER": false,
+        "DISABLE_SSR": false
       }
     },
     "build": {
@@ -56,7 +57,8 @@
         "WEBPACK_DEV_SERVER": false,
         "BROWSER": false,
         "API_ENDPOINT": "http://localhost:6060/api",
-        "REDUX_LOGGER": false
+        "REDUX_LOGGER": false,
+        "DISABLE_SSR": false
       }
     }
   },
@@ -76,6 +78,7 @@
     "babel-preset-stage-2": "^6.22.0",
     "babili-webpack-plugin": "^0.1.1",
     "better-npm-run": "0.0.15",
+    "chokidar": "^1.7.0",
     "coveralls": "^2.12.0",
     "css-loader": "^0.28.0",
     "dotenv": "^4.0.0",

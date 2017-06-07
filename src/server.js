@@ -177,7 +177,7 @@ export default ({ clientStats }) => {
     const history = syncHistoryWithStore(memoryHistory, store)
     const routes = getRoutes(store)
 
-    if (process.env.DISABLE_SSR) {
+    if (process.env.DISABLE_SSR == true) {
       const html = render(store, { modulesById, chunksById, assetsByChunkName })
 
       res.status(200)

@@ -3,6 +3,8 @@
 const debug = require('debug')('app')
 const colors = require('colors')
 const express = require('express')
+const path = require('path')
+const chokidar = require('chokidar')
 const webpack = require('webpack')
 const webpackDevMiddleware = require('webpack-dev-middleware')
 const webpackHotMiddleware = require('webpack-hot-middleware')
@@ -38,5 +40,25 @@ router.use(
     chunkName: 'server'
   })
 )
+
+// Do "hot-reloading" of express stuff on the server
+// Throw away cached modules and re-require next time
+// Ensure there's no important state in there!
+const watchDir = path.join(__dirname, '../../server/routes/api')
+const watcher = chokidar.watch(watchDir)
+
+debug(colors.magenta(`Watch directory for changes ${watchDir}`))
+
+watcher.on('ready', () => {
+  watcher.on('all', () => {
+    debug(colors.green(`Clearing ${watchDir} module cache from server`))
+
+    Object.keys(require.cache).forEach(id => {
+      if (/[/\\]api[/\\]/.test(id) && !/[/\\]node_modules[/\\]/.test(id)) {
+        delete require.cache[id]
+      }
+    })
+  })
+})
 
 module.exports = router
