@@ -11,7 +11,6 @@ import Error from 'components/lib/error/Error'
 import styles from 'pages/index/Index.css'
 
 export class Index extends Component {
-
   componentDidMount() {
     const { dispatch } = this.props
 

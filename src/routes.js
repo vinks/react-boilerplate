@@ -31,14 +31,14 @@ const getRoutes = store => {
       <IndexRoute component={IndexLoadable} />
       <Route path="login" component={Login} />
 
-      // User private routes
+      {/* User private routes */}
       <Route
         path="baz"
         component={userIsAuthenticated(Baz)}
         onEnter={connect(userIsAuthenticated.onEnter)}
       />
 
-      // Misc routes
+      {/* Misc routes */}
       <Redirect from="foo" to="/" />
       <Route path="*" component={NotFound} />
     </Route>

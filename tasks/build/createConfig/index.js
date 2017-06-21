@@ -102,11 +102,11 @@ module.exports = options => {
       // in Loadable HoCs.
       x => !x.includes('.bin') && !x.includes('react-loadable')
     )
-    .reduce((externals, mod) => {
-      externals[mod] = `commonjs ${mod}`
+      .reduce((externals, mod) => {
+        externals[mod] = `commonjs ${mod}`
 
-      return externals
-    }, {}) : {},
+        return externals
+      }, {}) : {},
     node: {
       // Prevents the `process.env` defined on the `window` in Html.js
       // from being re-defined inside modules by https://github.com/webpack/node-libs-browser
