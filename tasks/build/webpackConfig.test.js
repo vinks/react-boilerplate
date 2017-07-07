@@ -11,9 +11,7 @@ describe('tasks/build/webpackConfig', () => {
       const config = webpackConfig.find(config => config.name === 'client')
 
       expect(config).toBeDefined()
-      expect({
-        __webpack_config__: config
-      }).toMatchSnapshot()
+      expect({ __webpack_config__: config }).toMatchSnapshot()
     })
   })
 
@@ -24,9 +22,7 @@ describe('tasks/build/webpackConfig', () => {
       expect(config).toBeDefined()
       delete config.externals // Reduce noise from node_modules
 
-      expect({
-        __webpack_config__: config
-      }).toMatchSnapshot()
+      expect({ __webpack_config__: config }).toMatchSnapshot()
     })
   })
 })

@@ -97,7 +97,7 @@ exports[`layouts/html/Html renders correctly 1`] = `
     <script
       dangerouslySetInnerHTML={
         Object {
-          "__html": "window.__INITIAL_STATE__ = {\\"initial\\":\\"state\\"}",
+          "__html": undefined,
         }
       }
     />
