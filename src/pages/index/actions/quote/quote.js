@@ -1,31 +1,26 @@
+import { createAction } from 'redux-act'
 import fetch from 'utils/fetch/fetch'
 
-export const FETCH_QUOTE_REQUEST = 'FETCH_QUOTE_REQUEST'
-export const FETCH_QUOTE_SUCCESS = 'FETCH_QUOTE_SUCCESS'
-export const FETCH_QUOTE_FAILURE = 'FETCH_QUOTE_FAILURE'
+export const fetchQuoteRequest = createAction(
+  'fetch quote request'
+)
 
-function fetchQuoteFailure(error) {
-  return {
-    type: FETCH_QUOTE_FAILURE,
-    payload: error.message
-  }
-}
+export const fetchQuoteSuccess = createAction(
+  'fetch quote success',
+  data => data.quote,
+  () => ({
+    receivedAt: Date.now()
+  })
+)
 
-function fetchQuoteSuccess(data) {
-  return {
-    type: FETCH_QUOTE_SUCCESS,
-    meta: {
-      receivedAt: Date.now()
-    },
-    payload: data.quote
-  }
-}
+export const fetchQuoteFailure = createAction(
+  'fetch quote failure',
+  error => error.message
+)
 
-function fetchQuote() {
+export function fetchQuote() {
   return dispatch => {
-    dispatch({
-      type: FETCH_QUOTE_REQUEST
-    })
+    dispatch(fetchQuoteRequest())
 
     return fetch(`${process.env.API_ENDPOINT}/quote`).then(
       data => dispatch(fetchQuoteSuccess(data)),

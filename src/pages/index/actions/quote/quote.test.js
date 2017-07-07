@@ -7,9 +7,9 @@ import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 import fetch from 'utils/fetch/fetch'
 import {
-  FETCH_QUOTE_REQUEST,
-  FETCH_QUOTE_SUCCESS,
-  FETCH_QUOTE_FAILURE,
+  fetchQuoteRequest,
+  fetchQuoteSuccess,
+  fetchQuoteFailure,
   fetchQuoteIfNeeded
 } from 'pages/index/actions/quote/quote'
 
@@ -34,7 +34,7 @@ describe('pages/index/actions/quote/quote', () => {
     const action = store.getActions()[0]
 
     expect(action).toEqual({
-      type: FETCH_QUOTE_REQUEST
+      type: fetchQuoteRequest.getType()
     })
   })
 
@@ -82,7 +82,7 @@ describe('pages/index/actions/quote/quote', () => {
       const action = store.getActions()[1]
 
       expect(action).toEqual({
-        type: FETCH_QUOTE_SUCCESS,
+        type: fetchQuoteSuccess.getType(),
         meta: {
           receivedAt: jasmine.any(Number)
         },
@@ -107,7 +107,7 @@ describe('pages/index/actions/quote/quote', () => {
       const action = store.getActions()[1]
 
       expect(action).toEqual({
-        type: FETCH_QUOTE_FAILURE,
+        type: fetchQuoteFailure.getType(),
         payload: 'Error'
       })
     })

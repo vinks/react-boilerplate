@@ -2,9 +2,9 @@
 
 import reducer from './quote'
 import {
-  FETCH_QUOTE_REQUEST,
-  FETCH_QUOTE_SUCCESS,
-  FETCH_QUOTE_FAILURE
+  fetchQuoteRequest,
+  fetchQuoteSuccess,
+  fetchQuoteFailure
 } from 'pages/index/actions/quote/quote'
 
 describe('pages/index/reducers/quote/quote', () => {
@@ -19,7 +19,7 @@ describe('pages/index/reducers/quote/quote', () => {
 
   it('handles FETCH_QUOTE_REQUEST', () => {
     const action = {
-      type: FETCH_QUOTE_REQUEST
+      type: fetchQuoteRequest.getType()
     }
     const state = {
       isFetching: false,
@@ -38,7 +38,7 @@ describe('pages/index/reducers/quote/quote', () => {
 
   it('handles FETCH_QUOTE_SUCCESS', () => {
     const action = {
-      type: FETCH_QUOTE_SUCCESS,
+      type: fetchQuoteSuccess.getType(),
       payload: 'A quote'
     }
     const state = {
@@ -58,7 +58,7 @@ describe('pages/index/reducers/quote/quote', () => {
 
   it('handles FETCH_QUOTE_FAILURE', () => {
     const action = {
-      type: FETCH_QUOTE_FAILURE,
+      type: fetchQuoteFailure.getType(),
       payload: 'Error'
     }
     const state = {

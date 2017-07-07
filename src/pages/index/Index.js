@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { T } from 'lioness'
-import { fetchQuoteIfNeeded } from 'pages/index/actions/quote/quote'
+import { fetchQuote, fetchQuoteIfNeeded } from 'pages/index/actions/quote/quote'
 
 import Loader from 'components/lib/loader/Loader'
 import Error from 'components/lib/error/Error'
@@ -15,6 +15,12 @@ export class Index extends Component {
     const { dispatch } = this.props
 
     Index.fetchData({ dispatch })
+  }
+
+  handleFetchClick = () => {
+    const { dispatch } = this.props
+
+    dispatch(fetchQuote())
   }
 
   render() {
@@ -30,6 +36,10 @@ export class Index extends Component {
             name={'User'}
           />
         </h1>
+
+        <button onClick={this.handleFetchClick}>
+          Fetch New
+        </button>
 
         {isFetching && <Loader />}
         {error && <Error>{error}</Error>}
