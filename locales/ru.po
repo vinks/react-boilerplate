@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-06-02 10:54+0300\n"
+"POT-Creation-Date: Mon Jul 31 2017 23:01:06 GMT+0300 (RTZ 2 (зима))\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -11,15 +11,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.0.2\n"
+"X-Generator: Poedit 2.0.3\n"
 
 #: D:/work/ssr/60fram/src/containers/app/App.js:26
 msgid "Dear {{ name }}, there is one potato left"
 msgid_plural "Dear {{ name }}, there are {{ count }} potatoes left"
 msgstr[0] "Дорогой {{ name }}, осталась одна картошка"
-msgstr[1] "Дорогой {{ name }}, осталось {{ count }} картошки"
+msgstr[1] "Дорогой {{ name }}, осталось {{ count }} апельсинок"
 msgstr[2] "Дорогой {{ name }}, осталось {{ count }} картошек"
 
 #: D:/work/ssr/60fram/src/containers/app/App.js:35
+#: D:/work/ssr/60fram/src/containers/app/App.js:36
 msgid "By more potatoes {{ link:here }}!"
-msgstr "Купить больше картошки можно {{ link:тут }}!"
+msgstr "Купить больше картошек можно {{ link:тут }}!"
+
+#: D:/work/ssr/60fram/src/containers/app/App.js:35
+msgid "Hello friend, how low?"
+msgstr "Привет друг, как твое настроение?"

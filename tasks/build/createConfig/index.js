@@ -76,7 +76,9 @@ module.exports = options => {
         css(/node_modules/, options),
         cssModules(SRC_DIR, options),
         fonts(SRC_DIR),
+        fonts(/node_modules/),
         images(SRC_DIR),
+        images(/node_modules/),
         video(SRC_DIR),
         audio(SRC_DIR),
         po()

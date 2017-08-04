@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import { LionessProvider, T } from 'lioness'
+import { Button } from '@bandwidth/shared-components'
 
 // Styles
 import styles from 'containers/app/App.css'
@@ -11,16 +13,22 @@ import styles from 'containers/app/App.css'
 import ru from '../../../locales/ru.po'
 const messages = { ru }
 
+import Locale from 'components/locale/Locale'
+
 const DEFAULT_TITLE = 'React Boilerplate'
 
-function App({ children }) {
+function App({ children, locale }) {
   return (
-    <LionessProvider messages={messages} locale="ru">
+    <LionessProvider messages={messages} locale={locale}>
       <div className={styles.root}>
         <Helmet
           titleTemplate={`%s | ${DEFAULT_TITLE}`}
           defaultTitle={DEFAULT_TITLE}
         />
+
+        <Locale />
+
+        <Button>Ok</Button>
 
         <h1 className={styles.h1}>
           <T
@@ -32,6 +40,10 @@ function App({ children }) {
         </h1>
 
         <div className={styles.link}>
+          <h1>
+            <T message="Hello friend, how low?" />
+          </h1>
+
           <T
             message="By more potatoes {{ link:here }}!"
             link={<a href="http://potatoes.com/buy" />}
@@ -50,7 +62,12 @@ function App({ children }) {
 }
 
 App.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  locale: PropTypes.string.isRequired
 }
 
-export default App
+function mapStateToProps(state) {
+  return { ...state.locale }
+}
+
+export default connect(mapStateToProps)(App)
